@@ -1,0 +1,23 @@
+{% comment %} 
+<!--
+  Porfolio Tabs
+
+  This partial is included any page that that has a list of portfolio items.
+  It provides functionality to display all category filters for portfolio
+  items. The data is pulled from the portfolio-filter yml file.
+
+--> 
+{% endcomment %}
+
+{% assign content = site.data.portfolio-filters %}
+
+<div class="section-content">
+  <div class="main_content">
+    <div class="isotop-filter" id="filters">
+      <button type="button" class="btn btn-isotop is-checked" data-filter="*">All</button>
+      {% for filter in content.portfolio-filters %}
+      <button type="button" class="btn btn-isotop" data-filter=".{{ filter.value }}">{{ filter.name }}</button>
+      {% endfor %}
+    </div>
+  </div>  <!-- main_content -->
+</div>

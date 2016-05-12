@@ -1,0 +1,63 @@
+{% comment %} 
+<!--
+  Download My Resume Section
+
+  This partial is included any page that that has the download my resume section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.download %}
+
+<!-- Video -->
+<section id="video" class="section video-player dark-bg">
+  <div class="color-overlay"></div>
+
+  <div class="container" id="video-info">
+    <div class="row">
+      <div class="col-sm-5">
+
+        <!-- video-left -->
+        <div class="video-left">
+          Download
+        </div>
+
+      </div><!-- col-sm-4 -->
+
+      <div class="col-sm-1">
+
+        <!-- Play Button -->
+        <a id="playVideo" href="#" class="btn video-icon">
+          <i class="glyphicon glyphicon-download"></i>
+        </a>
+
+        <span>[doc Version]</span>
+
+      </div><!-- col-sm-4 -->
+
+      <div class="col-sm-1">
+
+        <!-- Play Button -->
+        <a id="playVideo" href="#" class="btn video-icon">
+          <i class="glyphicon glyphicon-download"></i>
+        </a>
+
+        <span>[pdf Version]</span>
+
+      </div><!-- col-sm-4 -->
+
+      <div class="col-sm-5">
+
+        <!-- video-right -->
+        <div class="video-right">
+          My Resume
+        </div>
+
+      </div><!-- col-sm-4 -->
+    </div><!-- row -->
+
+  </div><!-- container -->
+
+</section>
+<!-- /Video -->

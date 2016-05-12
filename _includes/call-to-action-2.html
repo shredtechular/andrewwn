@@ -1,0 +1,20 @@
+{% comment %} 
+<!--
+  CTA Section
+
+  This partial is included any page that that has the cta section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.cta2 %}
+
+<!-- Call To Action -->
+<div id="cta-2" class="cta-2 text-center">
+    <div class="container">
+        <span class="cta-text">{{ content.header }}</span>
+        <a class="btn btn-default-o" href="{{ content.btn-link | append: site.baseurl }}">{{ content.btn }}</a>
+    </div>
+</div>
+<!-- Call To Action -->

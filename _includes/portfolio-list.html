@@ -1,0 +1,38 @@
+{% comment %} 
+<!--
+  Portfolio list
+
+  This partial is included any page that that has a list of portfolio items.
+  It provides functionality to display all portfolio items or up to a limit
+  if provided.
+
+  input: 
+  - limit {integer} The maximum number of items to show
+  
+--> 
+{% endcomment %}
+
+{% if include.limit %}
+  {% assign limit = include.limit %}
+{% else %}
+  {% assign limit = 100 %}
+{% endif %}
+
+{% for item in site.posts | limit: limit %}
+{% assign data_categories =  item.tags | join: ' ' | replace: ',', ' ' | downcase %}
+<li data-category="{{ data_categories }}" class="{{ data_categories }}">
+  <a href="{{ item.url | prepend: site.baseurl }}">
+    {% for pic in item.images limit:1 %}
+    <img src="/assets/images/work/{{ pic.url }}" alt="{{ item.title }}" />
+    {% endfor %}
+    <div class="portfolio-detail-overlay">
+      <div class="middle-align-wrap">
+        <div class="middle-align-cell">
+          <h4>{{ item.title }}</h4>
+          <span>{{ item.category }}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</li>
+{% endfor %}

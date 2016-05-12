@@ -1,0 +1,82 @@
+{% comment %} 
+<!--
+  Contact Us Section
+
+  This partial is included any page that that has the contact us section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.contact-us %}
+
+<!-- Contact-us -->
+<section id="contact" class="section contact">
+    <div class="container">
+        <!---->
+        <header class="section-heading">
+            <h2>{{ content.header }}</h2>
+            <span>{{ content.tagline }}</span>
+        </header>
+        <!---->
+
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-6 col-sm-5">
+                    <h5>Feel free to drop me a line!</h5>
+                    <form action="php/contact-form.php" class="contact-form" id="contactForm" method="post" name="contactform" role="form">
+
+                        <div class="form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email Address" type="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="massage" placeholder="Type your message here" rows="5" required></textarea>
+                        </div>
+
+                        <div id="contactFormResponse"></div>
+
+                        <button id="cfsubmit" type="submit" class="btn btn-dark btn-block contact-submit">Send</button>
+
+                    </form>
+                </div>
+                <div class="col-md-6 col-sm-7">
+                    <h5>Find me on Google maps</h5>
+                    <div class="google-map">
+                        <div id="map"></div>
+                    </div>
+
+                    <div class="row contact-info-wrap">
+                        <div class="col-sm-6">
+                            <div>
+                                <h5>My Address</h5>
+                                <address class="contact-info">
+                                    <span>337 S. Ann St</span><br>
+                                    <span>Baltimore</span>,
+                                    <span>MD </span> -
+                                    <span>21231</span><br>
+                                    <span>United States</span>
+                                </address>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div>
+                                <h5>Contact Information</h5>
+                                <div class="contact-info">
+                                    Mobile: ( 443 ) 629-5300<br>
+                                    andrewwn@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact-us -->

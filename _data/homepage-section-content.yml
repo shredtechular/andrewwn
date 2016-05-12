@@ -1,0 +1,68 @@
+homepage:
+  hero:
+    header: "Code to Live, Live to Code"
+    tagline: "Who's onboard?"
+    btn: "My Services"
+    btn-link: "#services"
+    arrow-link: "#about-us"
+  about:
+    header: "About Me"
+    tagline: "Everything you need to know about me in a nutshell"
+    pic: "/about-me/in-a-nutshell.jpg"
+    left:
+      header: "Welcome"
+      desc: "Hello, my name is Andrew Newhouse and you have reached my professional website. Throughout this site you can find information on my skills, experience, and samples of my work. Most of the work I have done has been built for internal business and government use only, so it is not possible to release the full blown applications. However, if you have any additional questions on them I can be contacted at andrewwn@gmail.com"
+    right:
+      header: "History"
+      desc: "I got started in computer programming at Viginia Tech where I received a BS in Accounting Information Systems from the Pamplin College of Business. While going to school I also interned at Logicon. Logicon was later bought by Northrop Grumman where I worked for six years. I moved from Virginia to Baltimore and switched to Aquilent where I worked until 2016. If you add it all up it equals over 15 years of on the job experience and 20 years of developing!"
+    bottom:
+      header: "Professional Summary"
+      desc: "A dedicated programmer with superior skills in developing complex Internet applications with a recent focus on defining service-oriented architectures through REST APIs built with Node.js and single page applications using frameworks like AngularJS, Backbone.js, and ReactJS.  A collaborative leader who is particularly skilled in architecting databases and developing the user interface to meet the stated requirements.  A gifted and agile learner as evidenced by quickly adapting to other skills such as project management and network administration.<br/><br/>Snowboarding is my favorite non-technical hobby, so that will explain why I decided to combine some aspects of a couple of activities that I do well!"
+  strengths:
+    header: "My strengths"
+    tagline: "Choosing a developer is tough. Let me convince you"
+    pic: "/why-choose-us/1.png"
+    top-items:
+      - header: "Attentive"
+        desc: "No project will succeed without first and foremost being attentive to a client's needs and what is important to them."
+      - header: "Leader"
+        desc: "One of my newer skills that I'm always working on is my ability to lead technical teams.  This is newer to me on the professional front, but it comes very naturally."
+      - header: "Experienced"
+        desc: "With about 20 years of development experience, I have attained significant in-depth industry knowledge and providing innovative solutions."
+    bot-items:
+      - header: "Dedicated"
+        desc: "Maybe the first trait that many would describe me.  I will do everything in my power to make sure the project succeeds and the client is completely satisfied."
+      - header: "Professional"
+        desc: "I pride myself in approaching all aspects of my business in a very uniform way and ensure my clients are also constantly communicated to about status."
+      - header: "Enthusiastic"
+        desc: "I am very passionate about development projects and am especially eager to constantly learn new techniques and solutions."
+  expertise:
+    header: "My Expertise"
+    tagline: "A quick look at my specific skills"
+  services:
+    header: "My Services"
+    tagline: "Everything that I can offer"
+    categories:
+    - title: "Custom Website Development"
+      desc: "If you are looking to code a new website from a design or maintain existing sites then look no further.  I write the cleanest and most re-usable code that I can while maintaining best practices, optimized performance, and compliance for accessibility, security, and validation."
+      icon: "cubes"
+    - title: "Content Management Systems"
+      desc: "I have several years of experience customizing and building new themes/plugins for content management systems.  In addition, some of these systems can be quite cumbersome to maintain, which I can streamline for you.  If you are looking for incorporating a static site generator into your workflow, I would be very excited to work with you in developing that too!"
+      icon: "line-chart"
+    - title: "DevOps<br/><br/>"
+      desc: "I'm also quite skilled in implementing automation such as automated testing frameworks and continuous integration for your projects.  My work in this area has relieved some pain points for clients who were struggling to automate deployments safely and consistently."
+      icon: "sitemap"
+  cta:
+    header: "Are you excited to start your project?"
+    btn: "Get Started"
+    btn-link: "#contact"
+  portfolio:
+    header: "Recent Projects"
+    tagline: ""
+  cta2:
+    header: "Want to see more of my work?"
+    btn: "View all"
+    btn-link: "portfolio"
+  contact-us:
+    header: "Get in touch!"
+    tagline: "I am happy to listen and help"

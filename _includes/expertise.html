@@ -1,0 +1,89 @@
+{% comment %} 
+<!--
+  Expertise Section
+
+  This partial is included any page that that has the expertise section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.expertise %}
+
+{% assign skills = site.data.skills %}
+
+<!-- Expertise -->
+<section id="expertise" class="section dark-bg expertise progressbars">
+  <div class="color-overlay"></div>
+  <div class="container">
+    <header class="section-heading">
+      <h2>{{ content.header }}</h2>
+      <span>{{ content.tagline }}</span>
+    </header>
+
+    <div class="section-content">
+      <div class="row">
+        <div class="col-sm-6">
+          <div id="expertise-tab" role="tabpanel" class="expertise-description">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+
+              {% for item in skills.categories %}
+              <li role= "presentation" {% if forloop.index == 1 %}class="active"{% endif %}><a href="#{{ item.category }}" aria-controls="{{ item.category }}" role="tab" data-toggle="tab" class="skillLink">{{ item.category | replace: "-", " " }}</a></li>
+              {% endfor %}
+
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+              {% for item in skills.categories %}
+
+              <div role="tabpanel" class="tab-pane{% if forloop.index == 1 %} active{% endif %}" id="{{ item.category }}">
+                <div class="tab-left">
+                  <i class="fa fa-{{ item.icon }} fa-5x"></i>
+                </div>
+                <div class="tab-right">
+                  <p style="font-style:italic">"{{ item.quote }}"</p>
+                  <p style="text-indent: 15px;">– {{ item.author }}</p>
+                </div>
+              </div>
+
+              {% endfor %}
+
+            </div><!--/tab-content-->
+          </div><!-- tabpanel -->
+        </div><!-- col-md-6 -->
+
+        <div class="col-sm-6 skills-container">
+
+          {% for item in skills.categories %}
+          <div class="progress-box{% if forloop.index == 1 %} active{% endif %}" id="skills-{{ item.category }}">
+
+            {% for skill in item.techs %}
+
+            <header class="progress-heading">
+                <div class="row">
+                    <div class="col-xs-6">{{ skill.title }}</div>
+                    <div class="col-xs-6 text-right">used on {{skill.percent-used }}% of {{ item.category | replace: "-", " " }} projects</div>
+                </div>
+            </header>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{skill.percent-used }}" aria-valuemin="0"
+                     aria-valuemax="100">
+                    <span class="sr-only">{{skill.percent-used }}% Complete</span>
+                </div>
+            </div>
+
+            {% endfor %}
+
+          </div>
+          {% endfor %}
+
+        </div><!-- col-md-6 -->
+      </div><!-- row -->
+    </div><!-- .section-content -->
+  </div><!-- .container -->
+</section>
+<!-- /Expertise -->

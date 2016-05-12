@@ -1,0 +1,65 @@
+{% comment %} 
+<!--
+  About Me Section
+
+  This partial is included any page that that has the about me section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.about %}
+
+<!-- About Us -->
+<section id="about-us" class="section about-us">
+    <div class="container">
+
+        <header class="section-heading">
+            <h2>{{ content.header }}</h2>
+            <span>{{ content.tagline }}</span>
+        </header><!-- section-heading -->
+
+        <div class="section-content">
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <!-- about-left -->
+                    <div class="about-content left">
+                        <h4>{{ content.left.header }}</h4>
+                        <p>{{ content.left.desc }}</p>
+                    </div>
+
+                </div><!-- col-sm-4 -->
+
+                <div class="col-sm-4">
+
+                    <!-- about-center -->
+                    <figure class="about-content center">
+                        <img class="img-responsive center-block" src="assets/images{{ content.pic }}" alt="">
+                    </figure>
+
+                </div><!-- col-sm-4 -->
+
+                <div class="col-sm-4">
+
+                    <!-- about-right -->
+                    <div class="about-content right">
+                        <h4>{{ content.right.header }}</h4>
+                        <p>{{ content.right.desc }}</p>
+                    </div>
+
+                </div><!-- col-sm-4 -->
+            </div><!-- row -->
+
+            <!-- about-bottom -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="text-center about-content bottom">{{ content.bottom.header }}</h4>
+                    <p>{{ content.bottom.desc }}</p>
+                </div>
+            </div><!-- row -->
+
+        </div><!-- section-content -->
+    </div><!-- container -->
+</section>
+<!-- /About Us -->

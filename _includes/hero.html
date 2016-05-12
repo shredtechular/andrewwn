@@ -1,0 +1,37 @@
+{% comment %} 
+<!--
+  Hero Section
+
+  This partial is included any page that that has a hero section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.hero %}
+
+<!-- Header -->
+<header id="header" class="header-wrapper home-parallax home-fade dark-bg @@bgimage">
+    <div class="gradient-overlay"></div>
+    <div class="header-wrapper-inner">
+        <div class="container">
+
+            <div class="intro">
+                <h1>{{ content.header }}</h1>
+<!--                <p>Who's ready <span class="rotate">to get inspired, to get onboard, to start fresh</span>?</p> 
+                <p>Get <span class="rotate">Inspired, onboard, innovated, transformed</span></p>-->
+                <p>{{ content.tagline }}</p>
+                <a href="{{content.btn-link }}" class="btn btn-default-o onPageNav">{{ content.btn }}</a>
+            </div><!-- /.intro -->
+
+        </div><!-- /.container -->
+
+        <div class="arrow-down">
+            <a href="{{ content.arrow-link }}" class="onPageNav">
+                <i class="ion-ios-arrow-down"></i>
+            </a>
+        </div><!-- /.arrow-down -->
+
+    </div><!-- /.header-wrapper-inner -->
+</header>
+<!-- /Header -->

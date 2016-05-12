@@ -1,0 +1,66 @@
+{% comment %} 
+<!--
+  My Strengths Section
+
+  This partial is included any page that that has the My Strengths section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.strengths %}
+
+<!-- Why-choose-us -->
+<section id="why-choose-us" class="section why-choose-us">
+  <div class="container">
+    <header class="section-heading">
+      <h2>{{ content.header }}</h2>
+      <span>{{ content.tagline }}</span>
+    </header>
+
+    <div class="section-content">
+      <div class="row">
+
+        {% for item in content.top-items %}
+
+        <div class="col-sm-4 why-explain-wrap">
+
+          <!-- why-choose-us-text -->
+
+          <h4>{{ item.header }}</h4>
+          <div class="why-explain top top-{{ forloop.index }}">
+            <p>{{ item.desc }}</p>
+          </div>
+
+        </div><!-- col-md-4 col-sm-6 -->
+
+        {% endfor %}
+
+      </div><!-- row -->
+
+      <!-- why-choose-us-image -->
+      <figure class="why-us-image">
+        <img class="img-responsive center-block hidden-xs" src="assets/images{{ content.pic }}" alt="">
+      </figure>
+
+      <div class="row">
+
+        {% for item in content.bot-items %}
+
+        <div class="col-sm-4 why-explain-wrap">
+
+          <!-- why-choose-us-text -->
+          <div class="why-explain bottom bottom-1">
+            <h4>{{ item.header }}</h4>
+          </div>
+          <p>{{ item.desc }}</p>
+
+        </div><!-- col-md-4 col-sm-6 -->
+
+        {% endfor %}
+
+      </div><!-- row -->
+    </div><!-- section-content -->
+  </div><!-- container -->
+</section>
+<!-- /Why-choose-us -->

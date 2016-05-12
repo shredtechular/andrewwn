@@ -1,0 +1,72 @@
+categories:
+  - category: "Frontend"
+    icon: "html5"
+    quote: "Before software can be reusable it first has to be usable."
+    author: "Ralph Johnson (computer scientist)<br/><br/>"
+    techs:
+    - title: Bootstrap
+      percent-used: "50"
+    - title: HTML5
+      percent-used: "100"
+    - title: "Javascript (Angular.js, Backbone.js)"
+      percent-used: "100"
+    - title: CSS ( and Preprocessors LESS/SASS)
+      percent-used: "100"
+  - category: "Full-Stack"
+    icon: "files-o"
+    quote: "Programs must be written for people to read, and only incidentally for machines to execute."
+    author: "Martin Golding"
+    techs:
+    - title: "Javascript (Node.js, Express)"
+      percent-used: "5"
+    - title: PHP
+      percent-used: "30"
+    - title: ASP/ASP.NET
+      percent-used: "30"
+    - title: Ruby
+      percent-used: "5"
+    - title: ColdFusion
+      percent-used: "30"
+  - category: "DBMS"
+    icon: "database"
+    quote: "When debugging, novices insert corrective code; experts remove defective code.."
+    author: "Richard Pattis"
+    techs:
+    - title: "MySQL"
+      percent-used: "20"
+    - title: "Oracle"
+      percent-used: "50"
+    - title: "MS SQL Server"
+      percent-used: "30"
+  - category: "CMS"
+    icon: "pencil-square-o"
+    quote: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight."
+    author: "Bill Gates"
+    techs:
+    - title: "Jekyll"
+      percent-used: "70"
+    - title: "WordPress"
+      percent-used: "20"
+    - title: "Percussion"
+      percent-used: "5"
+    - title: "SharePoint"
+      percent-used: "5"
+  - category: "Integration"
+    icon: "gears"
+    quote: "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."
+    author: "Ralph Johnson (computer scientist)"
+    techs:
+    - title: "Git"
+      percent-used: "70"
+    - title: "Bamboo"
+      percent-used: "50"
+    - title: "Jenkins"
+      percent-used: "20"
+    - title: "Travis"
+      percent-used: "30"
+    - title: "Subversion"
+      percent-used: "20"
+    - title: "JIRA"
+      percent-used: "90"
+    - title: "Confluence"
+      percent-used: "60"

@@ -1,0 +1,16 @@
+Gemfile.lock
+test/dest
+*.gem
+pkg/
+*~
+_site/
+.bundle/
+.DS_Store
+gh-pages/
+site/_site/
+.ruby-version
+.sass-cache
+_config-deploy.yml
+_config-deploy.ymle
+js/app.js
+Reign-v1.1

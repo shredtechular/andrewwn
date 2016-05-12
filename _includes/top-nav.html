@@ -1,0 +1,53 @@
+{% comment %} 
+<!--
+  Header
+
+  This partial is included on every page except to consistently
+  display the same header on each page.
+  
+--> 
+{% endcomment %}
+
+{% assign header = site.data.header-footer-content.header %}
+
+<!-- Fixed Top Navigation -->
+<nav id="fixedTopNav" class="navbar navbar-fixed-top main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+
+            <!-- Logo -->
+            <div class="navbar-brand" itemscope itemtype="https://schema.org/Organization">
+                <span itemprop="name" class="sr-only">{{ site.title }}</span>
+                <a itemprop="url" href="{{ site.baseurl }}/">
+                    {{ header.logo-title }}
+                </a>
+            </div>
+            <!-- /Logo -->
+
+        </div><!-- /.navbar-header -->
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                {% for nav in header.menu %}
+
+                <li><a href="{% if page.url == "/" %}#{{ nav.url }}{% else %}{{ site.baseurl }}/#{{ nav.url }}{% endif %}" itemprop="url">
+                    <span itemprop="name">{{ nav.title }}</span>
+                </a></li>
+
+                {% endfor %}
+
+            </ul>
+        </div>
+        <!-- /Navigation Links -->
+
+    </div><!-- /.container -->
+</nav>
+<!-- /Fixed Top Navigation -->

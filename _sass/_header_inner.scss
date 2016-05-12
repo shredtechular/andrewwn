@@ -1,0 +1,19 @@
+.header-inner {
+  padding-top: 200px;
+  background-color: black;
+  background-image: url(/assets/images/backgrounds/charleston-sc-2.jpg);
+  background-size: cover;
+  background-position:center bottom;
+  text-align: center;
+
+  .breadcrumb {
+    background-color: transparent;
+    color: rgba(254, 254, 255, 0.7);
+    a {
+      color: inherit;
+    }
+    i{
+      margin: 0 10px;
+    }
+  }
+}

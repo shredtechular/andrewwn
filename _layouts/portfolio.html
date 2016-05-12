@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<header id="header" class="home-parallax home-fade dark-bg header-inner">
+  <div class="color-overlay"></div>
+  <div class="container">
+    <h1>Portfolio</h1>
+    <div class="breadcrumb">
+      <a href="{{ site.baseurl }}/">Home</a> <i class="fa fa-angle-double-right"></i> Portfolio
+    </div>
+  </div>
+</header>
+<!-- Portfolio -->
+<section id="portfolio" class="section portfolio">
+  <div class="container">
+
+    {% include portfolio-filter.html %}
+
+  </div>
+
+  <div class="container portfolio-grid three-col">
+    <ul id="da-thumbs" class="da-thumbs isotope">
+
+      {% include portfolio-list.html %}
+
+    </ul>
+  </div><!--/portfolio-grid-->
+
+</section>
+<!-- /Portfolio -->

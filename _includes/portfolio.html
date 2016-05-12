@@ -1,0 +1,40 @@
+{% comment %} 
+<!--
+  Portfolio Section
+
+  This partial is included any page that that has the portfolio section.  
+  Currently it is only included as one of the sections in the homepage layout.
+  
+--> 
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.portfolio %}
+
+{% assign projects = site.data.projects %}
+
+<!-- Portfolio -->
+<section id="portfolio" class="section portfolio">
+  <div class="container">
+
+    <header class="section-heading">
+      <h2>{{ content.header }}</h2>
+      <span>{{ content.tagline }}</span>
+    </header>
+
+    {% include portfolio-filter.html %}
+
+  </div>
+
+
+  <div class="portfolio-grid">
+
+    <ul id="da-thumbs" class="da-thumbs isotope">
+      
+      {% include portfolio-list.html limit="12" %}
+
+    </ul>
+  
+  </div><!--/portfolio-grid-->
+
+</section>
+<!-- /Portfolio -->

@@ -1,0 +1,100 @@
+{% comment %} 
+<!--
+  Header
+
+  This partial is included on every page except to consistently
+  display the same header on each page.
+  
+--> 
+{% endcomment %}
+
+{% assign footer = site.data.header-footer-content.footer %}
+
+<!-- Footer widgets -->
+<section id="footer-widgets" class="section footer-widgets dark-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="content-wrap widget-text">
+                    <h4>{{ footer.widgets.about.title }}</h4>
+                    <p>{{ footer.widgets.about.desc }}</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="content-wrap widget-contact">
+                    <h4>{{ footer.widgets.contact.title }}</h4>
+                    <ul>
+                        <li>
+                            <i class="ion-home"></i> {{ footer.widgets.contact.addr }}
+                        </li>
+                        <li>
+                            <i class="ion-android-call"></i> {{ footer.widgets.contact.phone }}
+                        </li>
+                        <li>
+                            <i class="ion-email"></i> <a href="mailto:{{ footer.widgets.contact.email }}">{{ footer.widgets.contact.email }}</a>
+                        </li>
+<!--                        <li>
+                            <i class="ion-ios-location"></i> Map and Direction
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="content-wrap widget-gallery">
+                    <h4>{{ footer.widgets.photo.title }}</h4>
+                    <div class="lightbox-gallery">
+                        <a href="/assets/images/{{ footer.widgets.photo.lightbox }}">
+                            <img src="/assets/images/{{ footer.widgets.photo.img }}" alt="{{ footer.widgets.photo.alt }}"/>
+                        </a>
+                        <p>{{ footer.widgets.photo.desc }}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer widgets -->
+<!-- footer -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <p class="copyright text-xs-center">&copy; {{ footer.copyright }}</p>
+            </div>
+
+            <div class="col-md-5 col-sm-4">
+                <ul class="footer-social-block">
+                    <li><a href="{{ footer.github-link }}" target="_new"><i class="fa fa-github"></i></a></li>
+
+                    <li><a href="{{ footer.linkedIn-link }}" target="_new"><i class="fa fa-linkedin"></i></a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- #footer -->
+
+<a id="totop" href="#totop"><i class="fa fa-angle-double-up"></i></a>
+<!-- js -->
+<script src="/assets/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+<!--<script src="assets/lib/owlcarousel/owl-carousel/owl.carousel.js"></script>-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKVYjsNw9mRXY8XafURS6xZjOi2GWAhAY"></script>
+<script src="/assets/lib/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="/assets/lib/waypoints/lib/shortcuts/inview.min.js"></script>
+
+<script src="/assets/lib/FlexSlider/jquery.flexslider.js"></script>
+<!--<script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.js"></script>-->
+<!--<script src="assets/lib/jquery.mb.YTPlayer/dist/jquery.mb.YTPlayer.min.js"></script>-->
+<script src="/assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+
+<script src="/assets/js/main.js"></script>
+
+<!--[if lt IE 10]>
+<script>
+    $('input, textarea').placeholder();
+</script>
+<![endif]-->
