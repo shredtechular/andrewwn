@@ -23,26 +23,7 @@
         <div class="section-content">
             <div class="row">
                 <div class="col-md-6 col-sm-5">
-                    <h5>Feel free to drop me a line!</h5>
-                    <form action="thank-you" class="contact-form" id="contactForm" method="post" name="contactform" role="form" netlify>
-
-                        <div class="form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email Address" type="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea class="form-control" id="message" name="massage" placeholder="Type your message here" rows="5" required></textarea>
-                        </div>
-
-                        <div id="contactFormResponse"></div>
-
-                        <button id="cfsubmit" type="submit" class="btn btn-dark btn-block contact-submit">Send</button>
-
-                    </form>
+                    {% include contact-form.html %}
                 </div>
                 <div class="col-md-6 col-sm-7">
                     <h5>Find me on Google maps</h5>

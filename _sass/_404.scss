@@ -2,17 +2,22 @@
   display: table;
   height: 100vh;
   width: 100%;
+  color: #fff;
 
-  background-image: url(../images/404.jpg);
-  background-size: contain;
+  h1, h2, h3, h5 {
+    color: #fff;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  background-image: url(/assets/images/backgrounds/skills.jpeg);
+  background-size: cover;
   background-position: 20% center;
   background-repeat: no-repeat;
 
-  @media (max-width: 991px) {
-    background-position-x: 0;
-  }
   @media (max-width: 767px){
-    background-image: none;
     text-align: center;
   }
 

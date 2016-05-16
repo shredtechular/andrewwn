@@ -1,0 +1,33 @@
+{% comment %}
+<!--
+  Contact Form Include
+
+  This partial is included any page that that has the contact form.
+  Currently it is only included as one of the sections in the homepage & 404
+  layouts.
+
+-->
+{% endcomment %}
+
+{% assign content = site.data.homepage-section-content.homepage.contact-us %}
+
+  <h5>Feel free to drop me a line!</h5>
+  <form action="thank-you" class="contact-form" id="contactForm" method="post" name="contactform" role="form" netlify>
+
+    <div class="form-group">
+      <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required>
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" id="email" name="email" placeholder="Email Address" type="email" required>
+    </div>
+
+    <div class="form-group">
+      <textarea class="form-control" id="message" name="massage" placeholder="Type your message here" rows="5" required></textarea>
+    </div>
+
+    <div id="contactFormResponse"></div>
+
+    <button id="cfsubmit" type="submit" class="btn btn-dark btn-block contact-submit">Send</button>
+
+  </form>
