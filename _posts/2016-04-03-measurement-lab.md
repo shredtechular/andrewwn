@@ -4,7 +4,7 @@ title: "Measurement Lab"
 date-worked: "2016"
 tags: "Jekyll, Javascript, JQuery, Bootstrap, HTML5, CSS, SASS, Git, GitHub"
 category: "Web Development"
-project-url: "https://measurementlab.net"
+project-url: "https://www.measurementlab.net/"
 github-url: "https://github.com/m-lab/m-lab.github.io"
 thumbnail: "mlab.jpg"
 images:
