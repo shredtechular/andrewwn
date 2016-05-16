@@ -4,6 +4,10 @@
     color: $content-color-on-dark-bg;
     text-transform: uppercase;
 
+    span {
+        font-size: 9px;
+    }
+
     .video-left, .video-right {
         text-align: center;
         font-weight: 300;
@@ -22,11 +26,11 @@
         color: $content-color-on-dark-bg;
         font-size: 38px;
         border: 1px solid $content-color-on-dark-bg;
-        width: 68px;
         height: 68px;
         position: relative;
         display: block;
         margin: 4px auto 0;
+        padding: 0px;
 
         @media only screen and (max-width: 767px) {
             margin-bottom: 20px;
@@ -35,7 +39,7 @@
         i{
             position: absolute;
             top: 14px;
-            left: 16px;
+            left: 14px;
         }
 
         &:hover, &:active, &:focus {

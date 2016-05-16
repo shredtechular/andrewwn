@@ -1,11 +1,11 @@
-{% comment %} 
+{% comment %}
 <!--
   Contact Us Section
 
-  This partial is included any page that that has the contact us section.  
+  This partial is included any page that that has the contact us section.
   Currently it is only included as one of the sections in the homepage layout.
-  
---> 
+
+-->
 {% endcomment %}
 
 {% assign content = site.data.homepage-section-content.homepage.contact-us %}
@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-5">
                     <h5>Feel free to drop me a line!</h5>
-                    <form action="php/contact-form.php" class="contact-form" id="contactForm" method="post" name="contactform" role="form">
+                    <form action="thank-you" class="contact-form" id="contactForm" method="post" name="contactform" role="form" netlify>
 
                         <div class="form-group">
                             <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required>

@@ -5,7 +5,16 @@
 
 $(document).ready(function () {
 
-    $("#contactForm").submit(function(e){
+	$("#contactForm").submit(function(e) {
+	  e.preventDefault();
+
+	  var $form = $(this);
+	  $.post($form.attr("action"), $form.serialize()).then(function() {
+	    alert("Thank you!");
+	  });
+	});
+
+/*    $("#contactForm").submit(function(e){
 
         e.preventDefault();
 
@@ -36,7 +45,7 @@ $(document).ready(function () {
 
         return false;
 
-    });
+    }); */
 });
 
 
@@ -315,7 +324,7 @@ var Grid = (function() {
 		};
 
 	function init( config ) {
-		
+
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
 
@@ -364,16 +373,16 @@ var Grid = (function() {
 	}
 
 	function initEvents() {
-		
+
 		// when clicking an item, show the preview with the item´s info and large image.
 		// close the item if already expanded.
 		// also close if clicking on the item´s cross
 		initItemsEvents( $items );
-		
+
 		// on window resize get the window´s size again
 		// reset some values..
 		$window.on( 'debouncedresize', function() {
-			
+
 			scrollExtra = 0;
 			previewPos = -1;
 			// save item´s offset
@@ -430,7 +439,7 @@ var Grid = (function() {
 				preview.update( $item );
 				return false;
 			}
-			
+
 		}
 
 		// update previewPos
@@ -481,7 +490,7 @@ var Grid = (function() {
 			if( $item ) {
 				this.$item = $item;
 			}
-			
+
 			// if already expanded remove class "og-expanded" from current item and add it to new item
 			if( current !== -1 ) {
 				var $currentItem = $items.eq( current );
@@ -508,7 +517,7 @@ var Grid = (function() {
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
-			
+
 			// remove the current image in the preview
 			if( typeof self.$largeImg != 'undefined' ) {
 				self.$largeImg.remove();
@@ -526,13 +535,13 @@ var Grid = (function() {
 						self.$largeImg = $img.fadeIn( 350 );
 						self.$fullimage.append( self.$largeImg );
 					}
-				} ).attr( 'src', eldata.largesrc );	
+				} ).attr( 'src', eldata.largesrc );
 			}
 
 		},
 		open : function() {
 
-			setTimeout( $.proxy( function() {	
+			setTimeout( $.proxy( function() {
 				// set the height for the preview and the item
 				this.setHeights();
 				// scroll to position the preview in the right place
@@ -566,7 +575,7 @@ var Grid = (function() {
 				}
 
 			}, this ), 25 );
-			
+
 			return false;
 
 		},
@@ -612,7 +621,7 @@ var Grid = (function() {
 			var position = this.$item.data( 'offsetTop' ),
 				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
 				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-			
+
 			$body.animate( { scrollTop : scrollVal }, settings.speed );
 
 		},
@@ -625,7 +634,7 @@ var Grid = (function() {
 		}
 	}
 
-	return { 
+	return {
 		init : init,
 		addItems : addItems
 	};
@@ -641,16 +650,16 @@ var Grid = (function() {
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2012, Codrops
  * http://www.codrops.com
  */
 ;( function( $, window, undefined ) {
-	
+
 	'use strict';
 
 	$.HoverDir = function( options, element ) {
-		
+
 		this.$el = $( element );
 		this._init( options );
 
@@ -667,7 +676,7 @@ var Grid = (function() {
 	$.HoverDir.prototype = {
 
 		_init : function( options ) {
-			
+
 			// options
 			this.options = $.extend( true, {}, $.HoverDir.defaults, options );
 			// transition properties
@@ -681,23 +690,23 @@ var Grid = (function() {
 		_loadEvents : function() {
 
 			var self = this;
-			
+
 			this.$el.on( 'mouseenter.hoverdir, mouseleave.hoverdir', function( event ) {
-				
+
 				var $el = $( this ),
 					$hoverElem = $el.find( 'div' ),
 					direction = self._getDir( $el, { x : event.pageX, y : event.pageY } ),
 					styleCSS = self._getStyle( direction );
-				
+
 				if( event.type === 'mouseenter' ) {
-					
+
 					$hoverElem.hide().css( styleCSS.from );
 					clearTimeout( self.tmhover );
 
 					self.tmhover = setTimeout( function() {
-						
+
 						$hoverElem.show( 0, function() {
-							
+
 							var $el = $( this );
 							if( self.support ) {
 								$el.css( 'transition', self.transitionProp );
@@ -705,27 +714,27 @@ var Grid = (function() {
 							self._applyAnimation( $el, styleCSS.to, self.options.speed );
 
 						} );
-						
-					
+
+
 					}, self.options.hoverDelay );
-					
+
 				}
 				else {
-				
+
 					if( self.support ) {
 						$hoverElem.css( 'transition', self.transitionProp );
 					}
 					clearTimeout( self.tmhover );
 					self._applyAnimation( $hoverElem, styleCSS.from, self.options.speed );
-					
+
 				}
-					
+
 			} );
 
 		},
 		// credits : http://stackoverflow.com/a/3647634
 		_getDir : function( $el, coordinates ) {
-			
+
 			// the width and height of the current div
 			var w = $el.width(),
 				h = $el.height(),
@@ -734,19 +743,19 @@ var Grid = (function() {
 				// gets the x value relative to the center of the DIV and "normalize" it
 				x = ( coordinates.x - $el.offset().left - ( w/2 )) * ( w > h ? ( h/w ) : 1 ),
 				y = ( coordinates.y - $el.offset().top  - ( h/2 )) * ( h > w ? ( w/h ) : 1 ),
-			
+
 				// the angle and the direction from where the mouse came in/went out clockwise (TRBL=0123);
 				// first calculate the angle of the point,
 				// add 180 deg to get rid of the negative values
 				// divide by 90 to get the quadrant
 				// add 3 and do a modulo by 4  to shift the quadrants to a proper clockwise TRBL (top/right/bottom/left) **/
 				direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 ) % 4;
-			
+
 			return direction;
-			
+
 		},
 		_getStyle : function( direction ) {
-			
+
 			var fromStyle, toStyle,
 				slideFromTop = { left : '0px', top : '-100%' },
 				slideFromBottom = { left : '0px', top : '100%' },
@@ -754,7 +763,7 @@ var Grid = (function() {
 				slideFromRight = { left : '100%', top : '0px' },
 				slideTop = { top : '0px' },
 				slideLeft = { left : '0px' };
-			
+
 			switch( direction ) {
 				case 0:
 					// from top
@@ -777,9 +786,9 @@ var Grid = (function() {
 					toStyle = slideLeft;
 					break;
 			};
-			
+
 			return { from : fromStyle, to : toStyle };
-					
+
 		},
 		// apply a transition or fallback to jquery animate based on Modernizr.csstransitions support
 		_applyAnimation : function( el, styleCSS, speed ) {
@@ -790,70 +799,70 @@ var Grid = (function() {
 		},
 
 	};
-	
+
 	var logError = function( message ) {
 
 		if ( window.console ) {
 
 			window.console.error( message );
-		
+
 		}
 
 	};
-	
+
 	$.fn.hoverdir = function( options ) {
 
 		var instance = $.data( this, 'hoverdir' );
-		
+
 		if ( typeof options === 'string' ) {
-			
+
 			var args = Array.prototype.slice.call( arguments, 1 );
-			
+
 			this.each(function() {
-			
+
 				if ( !instance ) {
 
 					logError( "cannot call methods on hoverdir prior to initialization; " +
 					"attempted to call method '" + options + "'" );
 					return;
-				
+
 				}
-				
+
 				if ( !$.isFunction( instance[options] ) || options.charAt(0) === "_" ) {
 
 					logError( "no such method '" + options + "' for hoverdir instance" );
 					return;
-				
+
 				}
-				
+
 				instance[ options ].apply( instance, args );
-			
+
 			});
-		
-		} 
+
+		}
 		else {
-		
+
 			this.each(function() {
-				
+
 				if ( instance ) {
 
 					instance._init();
-				
+
 				}
 				else {
 
 					instance = $.data( this, 'hoverdir', new $.HoverDir( options, this ) );
-				
+
 				}
 
 			});
-		
+
 		}
-		
+
 		return instance;
-		
+
 	};
-	
+
 } )( jQuery, window );
 
 /*------------------------------------------
@@ -1233,7 +1242,7 @@ var Grid = (function() {
         	$nav.addClass('navbar-solid');
         	return;
         }
-        
+
         $nav.removeClass('navbar-solid');
         $(".navbar-nav > li > a").blur();
 
@@ -1258,7 +1267,7 @@ var Grid = (function() {
 $(document).ready(function(){
 
     $('.main-navigation a[href*=#]:not([href=#]), .onPageNav').click(function() {
-       
+
         if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -1267,7 +1276,7 @@ $(document).ready(function(){
                 $('html,body').animate({
                     scrollTop: target.offset().top - 55
                 }, 1000, function(){
-                  
+
                 });
                 return false;
             }
@@ -1433,7 +1442,7 @@ $(window).load(function() {
 /*
 	$(function(){
 		$("#videoBackground").mb_YTPlayer();
-	}); 
+	});
 
 	$('#video-play').click(function(event) {
 		event.preventDefault();

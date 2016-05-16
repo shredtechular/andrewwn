@@ -18,6 +18,14 @@ homepage:
     bottom:
       header: "Professional Summary"
       desc: "A dedicated programmer with superior skills in developing complex Internet applications with a recent focus on defining service-oriented architectures through REST APIs built with Node.js and single page applications using frameworks like AngularJS, Backbone.js, and ReactJS.  A collaborative leader who is particularly skilled in architecting databases and developing the user interface to meet the stated requirements.  A gifted and agile learner as evidenced by quickly adapting to other skills such as project management and network administration.<br/><br/>Snowboarding is my favorite non-technical hobby, so that will explain why I decided to combine some aspects of a couple of activities that I do well!"
+  download:
+    header-left: "Download"
+    header-right: "My Resume"
+    download-items:
+      - title: "[doc Version]"
+        link: "/downloads/Newhouse Andrew Resume.docx"
+      - title: "[pdf Version]"
+        link: "/downloads/Newhouse Andrew Resume.pdf"
   strengths:
     header: "My strengths"
     tagline: "Choosing a developer is tough. Let me convince you"
