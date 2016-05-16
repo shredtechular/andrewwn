@@ -14,4 +14,4 @@ images:
 homepage: true
 ---
 {:.led}
-A freelance project that entailed converting an existing site over to Jekyll from a defunct CMS.  I have since made the site fully responsive by incorporating bootstrap along with a number of javascript enhancements to the site.  My work continues with this client and more updates are being made continuously.  I really have enjoyed working with very knowledgeable folks who really understand how development needs to be done!
+A freelance project that entailed converting an existing site over to Jekyll from a defunct CMS.  We incorporated Travis CI and some automated checks to ensure HTML and markdown files are validated and following best practices.  I have also made the site fully responsive by incorporating bootstrap along with a number of javascript enhancements to the site.  My work continues with this client and more updates are being made continuously.  I really have enjoyed working with very knowledgeable folks who really understand how development needs to be done!
