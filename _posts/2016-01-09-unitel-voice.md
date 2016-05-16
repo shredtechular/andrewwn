@@ -6,6 +6,7 @@ date-worked: "2011 - 2013"
 tags: "PHP 5.3, MySQL, Apache, Eclipse, JSON, AJAX, XML, Eclipse, Photoshop CS6, Authorize.Net"
 category: "Web Application Development"
 project-url: "http://www.unitelvoice.com/"
+thumbnail: "unitelvoice-logo.png"
 images:
   - url: "unitel-voice.png"
 homepage: true

@@ -6,9 +6,10 @@ tags: "Jekyll, CloudCannon, Bootstrap, HTML5, CSS, SASS, Git, GitHub, Javascript
 category: "Web Development"
 project-url: "http://nurserypager.github.io/"
 github-url: "https://github.com/nurserypager/nurserypager.github.io"
+thumbnail: "nursery-pager.jpg"
 images:
   - url: "np1.png"
-  - url: "np2.png"  
+  - url: "np2.png"
 homepage: true
 ---
 {:.led}

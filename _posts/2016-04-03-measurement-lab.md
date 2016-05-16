@@ -6,6 +6,7 @@ tags: "Jekyll, Javascript, JQuery, Bootstrap, HTML5, CSS, SASS, Git, GitHub"
 category: "Web Development"
 project-url: "https://measurementlab.net"
 github-url: "https://github.com/m-lab/m-lab.github.io"
+thumbnail: "mlab.jpg"
 images:
   - url: "mlab1.png"
   - url: "mlab2.png"

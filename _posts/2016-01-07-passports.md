@@ -6,6 +6,7 @@ date-worked: "2011 - 2012"
 tags: "ASP, SQL Server 2008, XML, Visual Studio, Fireworks CS6, Windows Server 2008, and IIS 7"
 category: "Web Application Development"
 project-url: "https://www.passportsandvisas.com/"
+thumbnail: "passport.jpg"
 images:
   - url: "passport.jpg"
 homepage: false

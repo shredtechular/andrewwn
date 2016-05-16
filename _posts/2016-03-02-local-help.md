@@ -5,6 +5,7 @@ client: "CMS"
 date-worked: "2013 - 2016"
 tags: "Backbone.js, Underscore, Node.js, Express, NPM, HTML5, CSS, SASS, LESS, Git, MySQL, GitHub Enterprise, Bamboo, Jenkins, JIRA, Confluence, Linux, AWS, Shell Scripting, Akamai, Agile"
 category: "Web Application Development"
+thumbnail: "help-thumb.jpg"
 images:
   - url: "help.png"
 homepage: true

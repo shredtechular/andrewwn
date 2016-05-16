@@ -17,14 +17,14 @@ footer:
     about:
       title: "About Me"
       desc: "A dedicated programmer with superior skills in developing complex Internet applications using PHP, Javascript, and Microsoft platforms. A collaborative leader who is particularly skilled in architecting databases and developing the user interface to meet the stated requirements."
-    contact: 
+    contact:
       title: "Contact info"
       addr: "337 S. Ann St. Baltimore, MD 21231"
       email: "andrewwn@gmail.com"
       phone: "(443) 629-5300"
     photo:
       title: "My cat"
-      img: "about-me/gin-4.png"
+      img: "about-me/gin-4-sm.png"
       alt: "Photo of my cat - Gin"
       lightbox: "about-me/gin-3.jpg"
       desc: "I just couldn't resist adding a picture of the coolest cat in the world somewhere in my site!<br/><br/>Her name is Gin, she's almost 20 years old and is my helper and drill sergeant.  She is always there to do code review late at night when I am rolling features out with one eye open!"

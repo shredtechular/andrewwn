@@ -45,6 +45,7 @@
     position: relative;
     width: 25%;
     padding: 5px;
+    display: table;
 
     @media only screen and (max-width: 992px) {
         width: 33%;
@@ -54,9 +55,6 @@
         width: 50%;
     }
 
-    img {
-      height: 280px;
-    }
 }
 
 
@@ -89,10 +87,15 @@
 .da-thumbs li a img {
     display: block;
     position: relative;
-    width: 100%;
+    vertical-align: middle;
+    margin: 0px auto;
+    max-height: 280px;
 }
 .da-thumbs li a {
     overflow: hidden;
+    display: table-cell;
+    height: 280px;
+    border: 1px #000 solid;
 }
 .da-thumbs li a .portfolio-detail-overlay {
     position: absolute;
@@ -102,6 +105,7 @@
     text-align: center;
     width: 100%;
     height: 100%;
+    display: none;
 }
 .da-thumbs li a div span {
     text-transform: uppercase;

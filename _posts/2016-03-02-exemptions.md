@@ -5,6 +5,7 @@ client: "CMS"
 date-worked: "2014 - 2016"
 tags: "Angular.js, Bower, HTML5, CSS, SASS, LESS, Git, GitHub Enterprise, Bamboo, JIRA, Confluence, Linux, AWS, Shell Scripting, Akamai, Agile"
 category: "Web Application Development"
+thumbnail: "calculator-thumb.jpg"
 images:
   - url: "calculator.jpg"
 homepage: true
