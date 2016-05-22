@@ -14,11 +14,10 @@
 <section id="video" class="section video-player dark-bg">
   <div class="color-overlay"></div>
 
-  <div class="container" id="video-info">
+  <div id="video-info">
     <div class="row">
       <div class="col-sm-5">
 
-        <!-- video-left -->
         <div class="video-left">
           {{ content.header-left }}
         </div>
@@ -27,9 +26,9 @@
 
       {% for download in content.download-items %}
 
-      <div class="col-sm-1 text-center">
+      <div class="col-sm-1 text-center download-icons">
 
-        <!-- Play Button -->
+        <!-- Download Button -->
         <a href="{{ download.link | prepend: site.baseurl }}" class="btn video-icon">
           <i class="glyphicon glyphicon-download"></i>
         </a>
@@ -42,7 +41,6 @@
 
       <div class="col-sm-5">
 
-        <!-- video-right -->
         <div class="video-right">
           {{ content.header-right }}
         </div>
