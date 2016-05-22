@@ -1,11 +1,11 @@
-{% comment %} 
+{% comment %}
 <!--
   Header
 
   This partial is included on every page except to consistently
   display the same header on each page.
-  
---> 
+
+-->
 {% endcomment %}
 
 {% assign footer = site.data.header-footer-content.footer %}
@@ -39,7 +39,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-6 col-sm-12">
                 <div class="content-wrap widget-gallery">
                     <h4>{{ footer.widgets.photo.title }}</h4>
                     <div class="lightbox-gallery">
@@ -48,7 +48,7 @@
                         </a>
                         <p>{{ footer.widgets.photo.desc }}</p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
