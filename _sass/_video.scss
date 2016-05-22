@@ -72,8 +72,8 @@
   }
 }
 
-@media (min-width: 768px) {
-  .video-info .download-icons {
+@media (max-width: 768px) {
+  #video-info .download-icons {
     margin-bottom: 20px;
   }
 }
