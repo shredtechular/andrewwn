@@ -84,6 +84,23 @@ module.exports = function(grunt) {
           '_includes/head.html': ['_includes/head.html']
         }
       }
+    },
+    critical: {
+      dist: {
+        options: {
+          base: './_site',
+          width: 320,
+          height: 70,
+          css: ['_site/css/style.min.css'],
+          minify: true
+        },
+        files: [{
+            expand: true,
+            cwd: '_site/',
+            src: ['**/*.html'],
+            dest: '_site/'
+        }]
+      }
     }
   });
 
@@ -94,9 +111,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-critical');
 
   // Register tasks
   grunt.registerTask('images', ['newer:imgcompress']);
   grunt.registerTask('pre-build', ['processhtml']);
-  grunt.registerTask('min', ['cssmin', 'uncss']);
+  grunt.registerTask('min', ['cssmin', 'uncss', 'critical']);
 };
