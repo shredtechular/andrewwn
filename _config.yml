@@ -10,7 +10,7 @@ permalink: "/projects/:title/"
 sass:
   sass_dir: _sass
   style: compressed
-include: ['_pages']
+include: ['_pages', '_redirects']
 exclude:
   - .gitignore
   - README.md
