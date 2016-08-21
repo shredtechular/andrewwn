@@ -1,8 +1,13 @@
 language: ruby
 rvm:
   - 2.2.3
+before_install: npm install -g grunt-cli
+install: npm install
+#before_script: grunt pre-build
 script:
+	- grunt pre-build
   - bundle exec jekyll build
+  - grunt min
 #  - bundle exec htmlproofer ./_site --only-4xx --check-html
 branches:
   only:
