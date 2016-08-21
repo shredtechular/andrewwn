@@ -14,3 +14,5 @@ _config-deploy.yml
 _config-deploy.ymle
 js/app.js
 Reign-v1.1
+node_modules
+npm-debug.log
