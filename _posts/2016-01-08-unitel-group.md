@@ -6,7 +6,7 @@ date-worked: "2011 - 2012"
 tags: "ASP, SQL Server 2008, Visual Studio"
 category: "Web Application Development"
 project-url: "https://www.unitelgroup.com"
-thumbnail: "unitelgroup-logo.png"
+thumbnail: "unitelgroup-logo.jpg"
 images:
   - url: "unitel-group-3.png"
 homepage: true
