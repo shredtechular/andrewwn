@@ -2,7 +2,9 @@ language: ruby
 rvm:
   - 2.2.3
 before_install: npm install -g grunt-cli
-install: npm install
+install:
+- npm install
+- bundle install
 #before_script: grunt pre-build
 script:
   - grunt pre-build
