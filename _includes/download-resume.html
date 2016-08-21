@@ -14,9 +14,9 @@
 <section id="video" class="section video-player dark-bg">
   <div class="color-overlay"></div>
 
-  <div id="video-info">
+  <div id="video-info" class="container">
     <div class="row">
-      <div class="col-sm-5">
+      <div class="col-xs-12 col-md-5">
 
         <div class="video-left">
           {{ content.header-left }}
@@ -26,7 +26,7 @@
 
       {% for download in content.download-items %}
 
-      <div class="col-sm-1 text-center download-icons">
+      <div class="{% if forloop.index == 1 %}col-xs-offset-3 col-md-offset-0 {% endif %}col-xs-3 col-md-1 text-center download-icons">
 
         <!-- Download Button -->
         <a href="{{ download.link | prepend: site.baseurl }}" class="btn video-icon">
@@ -39,7 +39,7 @@
 
       {% endfor %}
 
-      <div class="col-sm-5">
+      <div class="col-xs-12 col-md-5">
 
         <div class="video-right">
           {{ content.header-right }}
