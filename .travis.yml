@@ -23,9 +23,3 @@ branches:
 after_success:
   - chmod +x ./scripts/deploy.sh
   - ./scripts/deploy.sh
-
-
-mdl README.md _posts _pages ignore-front-matter true
-mdl README.md _posts _pages --ignore-front-matter
-
-mdl README.md _posts _pages --style scripts/markdown-linter-style.rb
