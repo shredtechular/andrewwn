@@ -10,8 +10,9 @@ script:
   - grunt pre-build
   - bundle exec jekyll build
   - grunt min
-  - bundle exec htmlproofer ./_site --only-4xx --check-html
   - cat _site/index.html
+  - bundle exec htmlproofer ./_site --only-4xx --check-html
+
 branches:
   only:
   - master
