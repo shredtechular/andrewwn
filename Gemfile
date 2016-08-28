@@ -8,5 +8,5 @@ gem 'github-pages', 72
 gem 'liquid'
 gem 'jekyll'
 gem 'jekyll-paginate'
-gem 'html-proofer', '3.0.2'
+gem 'html-proofer', '3.0.6'
 gem 'mdl', '0.2.1'
