@@ -1,8 +1,7 @@
-andrewwnewhouse.com
+# andrewwnewhouse.com
 ===================
 
 Static site for the andrewwnewhouse.com website.
-
 
 ## Requirements
 
