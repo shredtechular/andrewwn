@@ -1,11 +1,11 @@
-{% comment %} 
+{% comment %}
 <!--
   About Me Section
 
-  This partial is included any page that that has the about me section.  
+  This partial is included any page that that has the about me section.
   Currently it is only included as one of the sections in the homepage layout.
-  
---> 
+
+-->
 {% endcomment %}
 
 {% assign content = site.data.homepage-section-content.homepage.about %}
@@ -35,7 +35,7 @@
 
                     <!-- about-center -->
                     <figure class="about-content center">
-                        <img class="img-responsive center-block" src="assets/images{{ content.pic }}" alt="">
+                        <img class="img-responsive center-block" src="assets/images{{ content.pic }}" alt="{{ content.header }} picture">
                     </figure>
 
                 </div><!-- col-sm-4 -->

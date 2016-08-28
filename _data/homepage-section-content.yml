@@ -70,7 +70,7 @@ homepage:
   cta2:
     header: "Want to see more of my work?"
     btn: "View all"
-    btn-link: "portfolio"
+    btn-link: "/portfolio/"
   contact-us:
     header: "Get in touch!"
     tagline: "I am happy to listen and help"
