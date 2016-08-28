@@ -11,7 +11,6 @@ script:
   - bundle exec jekyll build
   - grunt min
   - bundle exec htmlproofer ./_site --only-4xx --check-html
-  # Execute Markdown Linter
   - mdl README.md _posts _pages --style _linter/markdown-linter-style.rb
 branches:
   only:
