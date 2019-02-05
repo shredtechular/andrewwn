@@ -1,5 +1,5 @@
 # andrewwnewhouse.com
-===================
+====================
 
 Static site for the andrewwnewhouse.com website.
 
