@@ -1,5 +1,5 @@
 # andrewwnewhouse.com
-===================
+====================
 
 Static site for the andrewwnewhouse.com website.
 
@@ -48,3 +48,4 @@ This section highlights the coding standards to be used for this project to ensu
 
 - All liquid variables are following an underscore pattern so they can be easier to differentiate from yml frontmatter variables
 - All liquid tags, objects, and filtesr will have spaces in front of and following whatever is contained within braces
+ 
