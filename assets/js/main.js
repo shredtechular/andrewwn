@@ -2002,12 +2002,12 @@ $("#playVideo").click(function(e){
 });
 
 const userGetAction = async (url) => {
-	const myInteraction = window.newrelic.interaction();
-	myInteraction.setName('userGetAction').save();
+	const myInteraction = window.newrelic?.interaction();
+	myInteraction?.setName('userGetAction').save();
   const response = await fetch(url);
   const myJson = await response.json(); //extract JSON from the http response
   document.getElementById("jsonResponse").innerHTML = JSON.stringify(myJson);
-  myInteraction.end();
+  myInteraction?.end();
   // do something with myJson
 }
 
