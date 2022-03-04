@@ -2000,3 +2000,10 @@ $("#playVideo").click(function(e){
     $("#video").hide();
     $("#video-container").fadeIn();
 });
+
+const userGetAction = async (url) => {
+  const response = await fetch(url);
+  const myJson = await response.json(); //extract JSON from the http response
+  document.getElementById("jsonResponse").innerHTML = JSON.stringify(myJson);
+  // do something with myJson
+}
