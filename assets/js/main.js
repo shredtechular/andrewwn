@@ -2001,9 +2001,22 @@ $("#playVideo").click(function(e){
     $("#video-container").fadeIn();
 });
 
-const userGetAction = async (url) => {
-  const response = await fetch(url);
-  const myJson = await response.json(); //extract JSON from the http response
-  document.getElementById("jsonResponse").innerHTML = JSON.stringify(myJson);
-  // do something with myJson
+// const userGetAction = async (url) => {
+//   const response = await fetch(url);
+//   const myJson = await response.json(); //extract JSON from the http response
+//   document.getElementById("jsonResponse").innerHTML = JSON.stringify(myJson);
+//   // do something with myJson
+// }
+
+function userGetAction(url) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+            // alert(this.responseText);
+            document.getElementById("jsonResponse").innerHTML = JSON.stringify(myJson);
+         }
+    };
+    xhttp.open("GET", 'http://ec2-3-14-148-27.us-east-2.compute.amazonaws.com/', true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
 }
