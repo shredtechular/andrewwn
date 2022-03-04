@@ -2017,6 +2017,6 @@ function userGetAction(url) {
          }
     };
     xhttp.open("GET", 'http://ec2-3-14-148-27.us-east-2.compute.amazonaws.com/', true);
-    xhttp.setRequestHeader("Content-type", "application/json");
+    // xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send();
 }
