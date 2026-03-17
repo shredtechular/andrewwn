@@ -220,7 +220,7 @@
       box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_alto_approx, -15px 30px 1px $color_celeste_approx;
     }
   }
-  @media screen and(max-width: 830px) {
+  @media screen and (max-width: 830px) {
     .og-expander {
       h3 {
         font-size: 32px;
@@ -233,7 +233,7 @@
       }
     }
   }
-  @media screen and(max-width: 650px) {
+  @media screen and (max-width: 650px) {
     .og-fullimg {
       display: none;
     }
